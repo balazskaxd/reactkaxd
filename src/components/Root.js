@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import App from './App';
@@ -10,5 +11,10 @@ const Root = ({ store, history }) => (
     </ConnectedRouter>
   </Provider>
 );
+
+Root.propTypes = {
+  store: PropTypes.shape().isRequired,
+  history: PropTypes.shape().isRequired,
+};
 
 export default Root;
